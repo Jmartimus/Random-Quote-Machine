@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$phone: 400px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 #background {
-  min-height: 100%;
-  min-width: 1024px;
+  min-height: 100vh;
+  min-width: 100vw;
   width: 100%;
   height: auto;
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   display: flex;
+  align-items: center;
+  
 }
 
 #quote-box {
@@ -22,19 +29,17 @@
   padding: 15px;
   width: 400px;
   height: auto;
+  @media screen and (max-width: $phone){
+width: 300px;
+  }
 }
 
-#new-quote {
-  color: white;
-  border-radius: 3px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  width: 100px;
-  align-self: flex-end;
-}
 #text {
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
+  @media screen and (max-width: $phone){
+font-size: 15px;
+  }
 }
 
 #author {
@@ -42,6 +47,9 @@
   font-size: 15px;
   margin: 10px;
   align-self: flex-end;
+  @media screen and (max-width: $phone){
+font-size: 10px;
+  }
 }
 
 #new-quote {
@@ -51,6 +59,9 @@
   font-size: 15px;
   width: 100px;
   align-self: flex-end;
+  @media screen and (max-width: $phone){
+font-size: 10px;
+  }
   &:hover {
     filter: brightness(150%) !important;
   }

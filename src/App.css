@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 #background {
-  min-height: 100%;
-  min-width: 1024px;
+  min-height: 100vh;
+  min-width: 100vw;
   width: 100%;
   height: auto;
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #quote-box {
@@ -30,19 +37,21 @@
   height: auto;
 }
 
-#new-quote {
-  color: white;
-  border-radius: 3px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  width: 100px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+@media screen and (max-width: 400px) {
+  #quote-box {
+    width: 300px;
+  }
 }
 
 #text {
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
+}
+
+@media screen and (max-width: 400px) {
+  #text {
+    font-size: 15px;
+  }
 }
 
 #author {
@@ -53,6 +62,12 @@
       align-self: flex-end;
 }
 
+@media screen and (max-width: 400px) {
+  #author {
+    font-size: 10px;
+  }
+}
+
 #new-quote {
   color: white;
   border-radius: 3px;
@@ -61,6 +76,12 @@
   width: 100px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+@media screen and (max-width: 400px) {
+  #new-quote {
+    font-size: 10px;
+  }
 }
 
 #new-quote:hover {
